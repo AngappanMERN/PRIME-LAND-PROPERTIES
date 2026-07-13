@@ -1,0 +1,74 @@
+/* Team Card Styles */
+.team-card {
+  background: linear-gradient(135deg, #1a1e2e 0%, #16213e 100%);
+  border-radius: 8px;
+  overflow: hidden;
+  text-align: center;
+  border: 1px solid rgba(0, 150, 255, 0.2);
+  transition: all 0.3s ease;
+  color: #e0e0e0;
+}
+
+.team-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 30px rgba(0, 150, 255, 0.3);
+  border-color: rgba(0, 150, 255, 0.6);
+}
+
+.team-image-wrapper {
+  overflow: hidden;
+  height: 300px;
+}
+
+.team-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.3s ease;
+}
+
+.team-card:hover .team-image {
+  transform: scale(1.05);
+}
+
+.team-content {
+  padding: 1.5rem;
+}
+
+.team-content h3 {
+  color: #00d4ff;
+  margin: 0 0 0.5rem;
+  font-size: 1.1rem;
+}
+
+.team-role {
+  color: #a0a0a0;
+  font-size: 0.9rem;
+  margin-bottom: 1rem;
+}
+
+.team-social {
+  display: flex;
+  gap: 1rem;
+  justify-content: center;
+}
+
+.team-social a {
+  width: 32px;
+  height: 32px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  background: #e8f4ff;
+  border: 1px solid #0096ff;
+  color: #0096ff;
+  text-decoration: none;
+  transition: all 0.3s;
+}
+
+.team-social a:hover {
+  background: #0096ff;
+  border-color: #0096ff;
+  color: white;
+}
