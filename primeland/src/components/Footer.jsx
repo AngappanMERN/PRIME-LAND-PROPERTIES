@@ -6,13 +6,13 @@ function Footer() {
     <footer className="footer">
       <div className="footer-container">
         <div className="footer-column">
-          <h3>PRIME LAND PROPERTIES</h3>
+          <Link to="/" className="flex items-center transition-transform duration-300 hover:scale-102">
+          <img src="/primeland-logo.png" alt="Prime Land Logo" className="h-16 w-auto object-contain mb-4" />
+        </Link>
           <p>Prime by name, Prime by property. Your trusted real estate partner.</p>
           <div className="social-links">
             <a href="#" aria-label="Facebook">f</a>
             <a href="#" aria-label="Instagram">📷</a>
-            <a href="#" aria-label="LinkedIn">in</a>
-            <a href="#" aria-label="YouTube">▶️</a>
           </div>
         </div>
 

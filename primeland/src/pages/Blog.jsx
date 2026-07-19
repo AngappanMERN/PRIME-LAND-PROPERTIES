@@ -14,8 +14,7 @@ function Blog() {
     <div className="blog-page">
       {/* Header */}
       <section className="blog-header">
-        <h1>BLOG DETAILS</h1>
-        <p>Home / Blog / Real Estate Investment Tips for Beginners</p>
+        
       </section>
 
       {/* Main Content */}

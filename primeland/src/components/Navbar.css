@@ -1,0 +1,138 @@
+/* Navbar styles matching the old Navigation design */
+
+.navbar-inner {
+  height: 80px;
+}
+
+/* Logo */
+.navbar-logo {
+  height: 65px;
+  width: auto;
+  object-fit: contain;
+  transition: transform 0.3s ease;
+}
+
+.logo-link:hover .navbar-logo {
+  transform: scale(1.05);
+}
+
+/* Nav link base */
+.nav-link-custom {
+  color: #2a2a2a;
+  text-decoration: none;
+  font-size: 0.9rem;
+  font-weight: 500;
+  text-transform: uppercase;
+  padding-bottom: 0.5rem;
+  border-bottom: 2px solid transparent;
+  transition: color 0.25s, border-color 0.25s;
+}
+
+.nav-link-custom:hover {
+  color: #0096ff;
+  border-bottom-color: #0096ff;
+}
+
+.nav-link-custom.active {
+  color: #0096ff;
+  border-bottom-color: #0096ff;
+}
+
+/* CTA Button */
+.btn-cta {
+  background-color: #f50a68;
+  color: #ffffff;
+  padding: 0.6rem 1.4rem;
+  border-radius: 6px;
+  border: none;
+  display: inline-block;
+  transition: background-color 0.15s, box-shadow 0.15s;
+}
+
+.btn-cta:hover {
+  background-color: #d60052;
+  box-shadow: 0 6px 18px rgba(213, 0, 82, 0.08);
+}
+
+/* Chevron */
+.chev {
+  font-size: 0.7rem;
+  margin-left: 0.25rem;
+  transition: transform 0.18s ease, color 0.18s ease;
+  color: #6c757d;
+}
+
+.chev.rotated {
+  transform: rotate(180deg);
+  color: #0096ff;
+}
+
+/* Mobile link styles */
+.nav-link-mobile {
+  color: #2a2a2a;
+  font-weight: 600;
+}
+
+/* Mega menu container */
+.mega-menu {
+  position: absolute;
+  top: 100%;
+  left: 50%;
+  transform: translateX(-50%);
+  margin-top: 8px;
+  width: 600px;
+  background: #FAF6F0;
+  border: 1px solid #e5dec9;
+  box-shadow: 0 12px 30px rgba(0,0,0,0.08);
+  border-radius: 12px;
+  padding: 18px;
+  z-index: 1100;
+  transition: opacity 180ms ease, transform 180ms ease;
+}
+
+.mega-row {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 12px 24px;
+}
+
+.mega-menu .service-link{
+  display: block;
+  padding: 8px 12px;
+  color: #333333;
+  font-weight: 700;
+  text-transform: uppercase;
+  font-size: 0.85rem;
+  border-left: 3px solid transparent;
+  transition: color 120ms ease, border-color 120ms ease, transform 120ms ease;
+}
+
+.mega-menu .service-link:hover{
+  color: #C5A880;
+  border-left-color: #C5A880;
+}
+
+.mega-menu .service-link.active{
+  color: #C5A880;
+  border-left-color: #C5A880;
+}
+
+/* Mobile mega menu */
+.mobile-mega{
+  padding-left: 1rem;
+  margin-top: 8px;
+  background: #fbf9f6;
+  border-left: 3px solid #e5dec9;
+  border-radius: 0 6px 6px 0;
+}
+
+.mobile-mega a { display:block; padding:0.5rem 0; color:#6b6b6b; text-transform:uppercase; font-weight:700; font-size:0.85rem; }
+
+.mobile-mega a.mobile-active { color:#C5A880; background:#FAF6F0; border-radius:6px; padding-left:0.5rem; }
+
+/* Responsive tweaks */
+@media (max-width: 768px) {
+  .navbar-inner { height: auto; padding-top: 8px; padding-bottom: 8px; }
+  .navbar-logo { height: 56px; }
+  .mega-menu { width: calc(100% - 32px); left: 16px; transform: none; }
+}

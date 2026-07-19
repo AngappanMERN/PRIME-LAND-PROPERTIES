@@ -1,7 +1,7 @@
 /* Navigation Styles */
 .navbar {
   background: #ffffff;
-  padding: 1rem 0;
+  padding: 7px 0;
   position: sticky;
   top: 0;
   z-index: 100;
@@ -33,6 +33,17 @@
   color: #ff1493;
 }
 
+.logo-image {
+  height: 65px;
+  width: auto;
+  object-fit: contain;
+  transition: transform 0.3s ease;
+}
+
+.nav-logo:hover .logo-image {
+  transform: scale(1.05);
+}
+
 .logo-icon {
   font-size: 1.5rem;
 }
@@ -40,7 +51,7 @@
 .nav-menu {
   display: flex;
   list-style: none;
-  gap: 2rem;
+  gap: 4rem;
   margin: 0;
   padding: 0;
   align-items: center;
@@ -62,7 +73,7 @@
 }
 
 .nav-item .btn-cta {
-  background: linear-gradient(135deg, #0096ff 0%, #00d4ff 100%);
+  background-color: #f50a68;
   color: #fff;
   padding: 0.7rem 1.5rem;
   border-radius: 5px;
@@ -71,7 +82,7 @@
 }
 
 .nav-item .btn-cta:hover {
-  background: linear-gradient(135deg, #00d4ff 0%, #ff1493 100%);
+  background: #d60052;
 }
 
 @media (max-width: 768px) {

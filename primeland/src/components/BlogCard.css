@@ -72,7 +72,7 @@
 
 .blog-btn {
   padding: 0.6rem 1.2rem;
-  background: linear-gradient(135deg, #0096ff 0%, #00d4ff 100%);
+  background: #f50a68;
   color: white;
   border: none;
   border-radius: 5px;
@@ -82,7 +82,7 @@
 }
 
 .blog-btn:hover {
-  background: linear-gradient(135deg, #00d4ff 0%, #ff1493 100%);
+  background: #d60052;
 }
 
 @media (max-width: 768px) {

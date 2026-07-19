@@ -7,8 +7,7 @@ function Projects() {
     <div className="projects-page">
       {/* Header */}
       <section className="projects-header">
-        <h1>OUR PROJECTS</h1>
-        <p>Home / Projects</p>
+       
       </section>
 
       {/* Project Stats */}

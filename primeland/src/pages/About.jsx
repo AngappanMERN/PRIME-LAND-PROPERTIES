@@ -7,8 +7,6 @@ function About() {
     <div className="about">
       {/* Header */}
       <section className="about-header">
-        <h1>ABOUT PRIME LAND PROPERTIES</h1>
-        <p>Your Trusted Partner in Real Estate</p>
       </section>
 
       {/* About Content */}

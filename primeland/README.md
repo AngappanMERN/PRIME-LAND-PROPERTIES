@@ -14,3 +14,23 @@ The React Compiler is not enabled on this template because of its impact on dev 
 ## Expanding the Oxlint configuration
 
 If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and Oxlint's TypeScript related rules in your project.
+
+
+
+## Web3Forms
+
+Setup Instructions
+Step 1: Create .env File
+Create a file named .env in your project root (same level as package.json):
+
+Step 2: Get Your Web3Forms Access Key
+Go to Web3Forms
+Sign up for a free account
+Create a new form and copy your Access Key
+Paste it in your .env file
+Step 3: Update .gitignore
+Make sure .env is in your .gitignore to keep your API key private:
+
+Step 4: Test Locally
+Visit your contact page and test the form submission.
+

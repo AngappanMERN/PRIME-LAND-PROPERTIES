@@ -1,24 +1,33 @@
-﻿/* Projects Page Styles */
+/* Projects Page Styles */
 .projects-page {
   color: #2a2a2a;
 }
 
 .projects-header {
-  background: linear-gradient(135deg, #ffffff 0%, #f5f5f5 100%);
-  padding: 4rem 2rem;
+  position: relative;
+  background: linear-gradient(rgba(0, 0, 0, 0.65), rgba(0, 0, 0, 0.65)), url('/projects-banner.png') no-repeat center center/cover;
+  min-height: 80vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
   text-align: center;
-  border-bottom: 2px solid #e0e0e0;
+  color: #ffffff;
+  padding: 2rem;
 }
 
 .projects-header h1 {
-  font-size: 2.5rem;
-  color: #0096ff;
+  font-size: 3rem;
+  color: #ffffff;
   margin: 0 0 1rem;
+  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
+  font-weight: 700;
 }
 
 .projects-header p {
-  font-size: 1rem;
-  color: #666666;
+  font-size: 1.25rem;
+  color: #f0f0f0;
+  text-shadow: 0 1px 3px rgba(0, 0, 0, 0.5);
 }
 
 /* Project Stats */
@@ -133,7 +142,7 @@
 .project-cta .cta-button {
   display: inline-block;
   padding: 1rem 2.5rem;
-  background: linear-gradient(135deg, #0096ff 0%, #0096ff 100%);
+  background: #f50a68;
   color: white;
   text-decoration: none;
   border-radius: 5px;
@@ -144,7 +153,7 @@
 }
 
 .project-cta .cta-button:hover {
-  background: linear-gradient(135deg, #0096ff 0%, #ff1493 100%);
+  background: #d60052;
 }
 
 @media (max-width: 768px) {
