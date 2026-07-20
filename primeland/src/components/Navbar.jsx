@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import { useState, useRef } from 'react';
 import { Link, NavLink } from 'react-router-dom';
 import { services } from '../data/services';
 import MegaMenu from './MegaMenu';
@@ -8,13 +8,25 @@ function Navbar() {
   const [isHovered, setIsHovered] = useState(false);
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
   const [isMobileServicesOpen, setIsMobileServicesOpen] = useState(false);
+  const timeoutRef = useRef(null);
 
   const getLinkClass = ({ isActive }) =>
     `nav-link nav-link-custom ${isActive ? 'active' : ''}`;
 
-  const toggleMobileMenu = () => {
+  const toggleMobileMenu = () => {  
     setIsMobileMenuOpen((s) => !s);
     setIsMobileServicesOpen(false);
+  };
+
+  const handleMouseEnter = () => {
+    clearTimeout(timeoutRef.current);
+    setIsHovered(true);
+  };
+
+  const handleMouseLeave = () => {
+    timeoutRef.current = setTimeout(() => {
+      setIsHovered(false);
+    }, 200);
   };
 
   return (
@@ -41,8 +53,8 @@ function Navbar() {
           {/* Services with Mega Menu */}
           <li
             className="nav-item position-relative d-flex align-items-center"
-            onMouseEnter={() => setIsHovered(true)}
-            onMouseLeave={() => setIsHovered(false)}
+            onMouseEnter={handleMouseEnter}
+            onMouseLeave={handleMouseLeave}
           >
             <NavLink to="/services" className={({ isActive }) => `nav-link nav-link-custom d-flex align-items-center gap-1 ${isActive || isHovered ? 'active' : ''}`}>
               Services

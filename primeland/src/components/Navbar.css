@@ -29,13 +29,8 @@
 }
 
 .nav-link-custom:hover {
-  color: #0096ff;
-  border-bottom-color: #0096ff;
-}
-
-.nav-link-custom.active {
-  color: #0096ff;
-  border-bottom-color: #0096ff;
+  color: #00c5ff;
+  border-bottom-color: #00c5ff;
 }
 
 /* CTA Button */
@@ -64,7 +59,7 @@
 
 .chev.rotated {
   transform: rotate(180deg);
-  color: #0096ff;
+  color: #00c5ff;
 }
 
 /* Mobile link styles */
@@ -108,21 +103,16 @@
 }
 
 .mega-menu .service-link:hover{
-  color: #C5A880;
-  border-left-color: #C5A880;
-}
-
-.mega-menu .service-link.active{
-  color: #C5A880;
-  border-left-color: #C5A880;
+  color: #02d5fb;
+  border-left-color: #97d6e8;
 }
 
 /* Mobile mega menu */
 .mobile-mega{
   padding-left: 1rem;
   margin-top: 8px;
-  background: #fbf9f6;
-  border-left: 3px solid #e5dec9;
+  background: #f3f9fb;
+  border-left: 3px solid #91e5fe;
   border-radius: 0 6px 6px 0;
 }
 

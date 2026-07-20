@@ -84,11 +84,10 @@
 /* Features Banner */
 
 .features-banner {
-  background-color: #212121;
-  padding: 1.8rem 1rem;
-  border-top: 1px solid rgba(205, 168, 105, 0.15);
-  border-bottom: 1px solid rgba(205, 168, 105, 0.15);
-  box-shadow: inset 0 0 40px rgba(0, 0, 0, 0.2);
+  background-color: #F5F9FC;
+  padding: 2rem 1rem;
+  border: none;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.04);
 }
 
 .features-container {
@@ -98,7 +97,7 @@
   justify-content: space-around;
   align-items: center;
   flex-wrap: wrap;
-  padding: 20px;
+  padding: 2rem 1rem;
   gap: 2.5rem;
 }
 
@@ -150,13 +149,15 @@
 /* Stats Section */
 .stats-section {
   background: #FAF6F0;
+  padding: 3rem 0;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.02);
 }
 
 .stats-container {
   max-width: 1100px;
   margin: 0 auto;
   display: grid;
-  padding: 15px;
+  padding: 2rem 1rem;
   grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
   gap: 2.5rem;
   text-align: center;
@@ -201,11 +202,12 @@
   max-width: 1200px;
   margin: 0 auto;
   padding: 4rem 2rem;
+  background: #F5F9FC;
 }
 
 .featured-properties h2 {
   font-size: 2rem;
-  color: #0096ff;
+  color: #1a1a1a;
   text-align: center;
   margin-bottom: 3rem;
 }
@@ -218,15 +220,15 @@
 
 /* Services Section */
 .services {
-  background: #f9f9f9;
+  background: #FFFFFF;
   padding: 4rem 2rem;
-  border-top: 1px solid #e0e0e0;
-  border-bottom: 1px solid #e0e0e0;
+  border: none;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.03);
 }
 
 .services h2 {
   font-size: 2rem;
-  color: #0096ff;
+  color: #1a1a1a;
   text-align: center;
   margin-bottom: 3rem;
 }
@@ -263,31 +265,33 @@
 
 /* CTA Section */
 .cta-section {
-  background: linear-gradient(135deg, #0096ff 0%, #00d4ff 100%);
+  background: #FAF6F0;
   padding: 4rem 2rem;
   text-align: center;
-  color: white;
+  color: #2a2a2a;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.02);
 }
 
 .cta-section h2 {
   font-size: 2rem;
-  color: white;
+  color: #1a1a1a;
   margin-bottom: 1rem;
 }
 
 .cta-section p {
   font-size: 1.1rem;
-  color: rgba(255, 255, 255, 0.9);
+  color: #666666;
   margin-bottom: 2rem;
 }
 
 .cta-section .cta-button {
-  background: white;
-  color: #f50a68;
+  background: #00c5ff;
+  color: #FFFFFF;
 }
 
 .cta-section .cta-button:hover {
-  background: #e0e0e0;
+  background: #00a8cc;
+  box-shadow: 0 6px 18px rgba(0, 197, 255, 0.2);
 }
 
 @media (max-width: 768px) {
@@ -297,10 +301,10 @@
   }
 
   .features-container {
-    display: grid;
+    /* display: grid; */
     grid-template-columns: repeat(2, 1fr);
     justify-items: center;
-    gap: 1.5rem;
+    gap: 1rem;
   }
 
   .feature-item h4 {
@@ -337,3 +341,112 @@
     gap: 1.5rem;
   }
 }
+
+/* Advantages Section */
+.advantages-section {
+  background: #FAF6F0;
+  padding: 5rem 1.5rem;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.02);
+}
+
+.advantages-container {
+  max-width: 1280px;
+  margin: 0 auto;
+}
+
+.advantages-header {
+  text-align: center;
+  margin-bottom: 3.5rem;
+}
+
+.advantages-label {
+  display: inline-block;
+  color: #00c5ff;
+  font-size: 0.75rem;
+  letter-spacing: 0.3em;
+  text-transform: uppercase;
+  font-weight: 600;
+  margin-bottom: 0.75rem;
+}
+
+.advantages-title {
+  font-size: 2rem;
+  color: #1a1a1a;
+  font-weight: 700;
+  margin-top: 0.75rem;
+  font-family: var(--font-serif);
+}
+
+.advantages-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 1.5rem;
+  grid-template-columns: repeat(3, 1fr);
+}
+
+.advantage-card {
+  background: #FFFFFF;
+  border: 1px solid #e5e7eb;
+  padding: 2rem 1.5rem;
+  border-radius: 6px;
+  transition: all 0.3s cubic-bezier(0.165, 0.84, 0.44, 1);
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.04);
+}
+
+.advantage-card:hover {
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.1);
+  transform: translateY(-4px);
+  border-color: #00c5ff;
+}
+
+.advantage-icon {
+  width: 28px;
+  height: 28px;
+  margin-bottom: 0.75rem;
+  filter: hue-rotate(45deg);
+}
+
+.advantage-card-title {
+  font-size: 1.25rem;
+  font-weight: 700;
+  color: #1a1a1a;
+  margin-bottom: 0.5rem;
+  font-family: var(--font-serif);
+}
+
+.advantage-card-description {
+  font-size: 0.875rem;
+  color: #666666;
+  line-height: 1.5;
+  margin: 0;
+}
+
+@media (max-width: 992px) {
+  .advantages-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  
+  .advantages-title {
+    font-size: 1.875rem;
+  }
+}
+
+@media (max-width: 640px) {
+  .advantages-section {
+    padding: 3rem 1rem;
+  }
+  
+  .advantages-header {
+    margin-bottom: 2rem;
+  }
+  
+  .advantages-grid {
+    grid-template-columns: 1fr;
+  }
+  
+  .advantages-title {
+    font-size: 1.5rem;
+  }
+}
+
+

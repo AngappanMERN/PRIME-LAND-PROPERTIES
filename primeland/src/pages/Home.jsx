@@ -1,6 +1,7 @@
 import { Link } from 'react-router-dom';
 import ServiceCard from '../components/ServiceCard';
 import { services } from '../data/services';
+import { advantages } from '../data/advantagesData';
 import './Home.css';
 
 function Home() {
@@ -95,7 +96,31 @@ function Home() {
         </div>
       </section>
 
-      {/* CTA Section */}
+      {/* Your advantages Section */}
+      <section className="advantages-section">
+        <div className="advantages-container">
+          <div className="advantages-header">
+            <span className="advantages-label">Your advantages</span>
+            <h2 className="advantages-title">Why Prime Land?</h2>
+          </div>
+          <div className="advantages-grid">
+            {advantages.map(advantage => (
+              <div key={advantage.id} className="advantage-card">
+                <img 
+                  src="https://skarosoft.com/sinova/wp-content/uploads/2026/07/points.svg" 
+                  alt="check" 
+                  className="advantage-icon"
+                />
+                <h3 className="advantage-card-title">{advantage.title}</h3>
+                <p className="advantage-card-description">{advantage.description}</p>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+        {/* EMI Calculator Section */}
+     
+        {/* CTA Section */}
       <section className="cta-section">
         <h2>Ready to Find Your Dream Property?</h2>
         <p>Let's help you find your next perfect investment opportunity</p>
