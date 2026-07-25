@@ -1,0 +1,452 @@
+/* Home Page Styles */
+.home {
+  color: #2a2a2a;
+  background: var(--bg-main);
+}
+
+/* Hero Section */
+.hero {
+  position: relative;
+  width: 100%;
+  overflow: hidden;
+  background: var(--bg-main);
+}
+
+.hero-video {
+  width: 100%;
+  height: auto;
+  display: block;
+  object-fit: cover;
+}
+
+.hero::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 400px;
+  height: 400px;
+  background: radial-gradient(circle, rgba(1, 133, 235, 0.08) 0%, transparent 70%);
+  border-radius: 50%;
+  z-index: 0;
+}
+
+.hero-content {
+  position: relative;
+  z-index: 1;
+}
+
+.hero-content h1 {
+  font-size: 3rem;
+  color: var(--btn-primary);
+  line-height: 1.2;
+  margin-bottom: 1rem;
+  text-shadow: none;
+}
+
+.hero-content p {
+  font-size: 1.1rem;
+  color: #666666;
+  margin-bottom: 2rem;
+  line-height: 1.6;
+}
+
+.cta-button {
+  display: inline-block;
+  padding: 1rem 2.5rem;
+  background: var(--btn-primary);
+  color: white;
+  text-decoration: none;
+  border-radius: 5px;
+  font-weight: bold;
+  transition: all 0.3s;
+  cursor: pointer;
+  border: none;
+  font-size: 1rem;
+}
+
+.cta-button:hover {
+  background: rgba(1, 133, 235, 0.9);
+  box-shadow: 0 10px 30px rgba(1, 133, 235, 0.25);
+  transform: translateY(-2px);
+}
+
+.hero-background {
+  position: relative;
+  z-index: 1;
+}
+
+.hero-background img {
+  width: 100%;
+  border-radius: 8px;
+  box-shadow: 0 20px 60px rgba(0, 150, 255, 0.15);
+}
+
+/* Features Banner */
+
+.features-banner {
+  background: var(--bg-main);
+  padding: 2rem 1rem;
+  border: none;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.04);
+}
+
+.features-container {
+  max-width: 1100px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  flex-wrap: wrap;
+  padding: 2rem 1rem;
+  gap: 2.5rem;
+}
+
+.feature-item {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 1rem;
+  padding: 0.5rem 1rem;
+  border-radius: 4px;
+  transition: all 0.4s cubic-bezier(0.165, 0.84, 0.44, 1);
+  cursor: default;
+}
+
+.feature-item:hover {
+  transform: translateY(-2px);
+}
+
+.feature-item:hover .feature-icon-svg {
+  stroke: var(--text-pink-color, #f41c72);
+  filter: drop-shadow(0 0 4px rgba(244, 28, 114, 0.4));
+  transform: scale(1.08);
+}
+
+.feature-item:hover h4 {
+  text-shadow: 0 0 10px rgba(255, 255, 255, 0.2);
+}
+
+.feature-icon-svg {
+  width: 28px;
+  height: 28px;
+  stroke: var(--text-pink-color, #f41c72);
+  stroke-width: 1.5px;
+  flex-shrink: 0;
+  transition: all 0.4s cubic-bezier(0.165, 0.84, 0.44, 1);
+}
+
+.feature-item h4 {
+  color: var(--text-pink-color, #f41c72);
+  font-family: var(--font-serif);
+  font-size: 1.25rem;
+  font-weight: 700;
+  margin: 0;
+  letter-spacing: 0.5px;
+  transition: all 0.4s cubic-bezier(0.165, 0.84, 0.44, 1);
+}
+
+/* Stats Section */
+.stats-section {
+  background: var(--bg-alternate);
+  padding: 3rem 0;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.02);
+}
+
+.stats-container {
+  max-width: 1100px;
+  margin: 0 auto;
+  display: grid;
+  padding: 2rem 1rem;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 2.5rem;
+  text-align: center;
+}
+
+.stat-item {
+  padding: 1rem;
+  background: transparent;
+  border: none;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  transition: transform 0.3s ease;
+}
+
+.stat-item:hover {
+  transform: scale(1.05);
+}
+
+.stat-item h3 {
+  font-size: 3rem;
+  color: #1a1a1a;
+  margin: 0;
+  font-family: var(--font-serif);
+  font-weight: 700;
+  line-height: 1.1;
+}
+
+.stat-item p {
+  color: #a28554;
+  margin-top: 0.6rem;
+  font-size: 1rem;
+  font-weight: 500;
+  font-family: var(--font-sans);
+  letter-spacing: 0.2px;
+  white-space: nowrap;
+}
+
+/* Featured Properties */
+.featured-properties {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 4rem 2rem;
+  background: var(--bg-main);
+}
+
+.featured-properties h2 {
+  font-size: 2rem;
+  color: #1a1a1a;
+  text-align: center;
+  margin-bottom: 3rem;
+}
+
+.properties-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 2rem;
+}
+
+/* Services Section */
+.services {
+  background: var(--bg-main);
+  padding: 4rem 2rem;
+  border: none;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.03);
+}
+
+.services h2 {
+  font-size: 2rem;
+  color: #1a1a1a;
+  text-align: center;
+  margin-bottom: 3rem;
+}
+
+.services-grid {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: repeat(3, minmax(280px, 1fr));
+  gap: 2rem;
+}
+
+/* Optional: easy card width adjustment */
+:root {
+  --service-card-width: 100%;
+}
+
+.services-grid .service-card {
+  width: var(--service-card-width);
+  margin: 0 auto;
+}
+
+@media (max-width: 992px) {
+  .services-grid {
+    grid-template-columns: repeat(2, minmax(280px, 1fr));
+  }
+}
+
+@media (max-width: 768px) {
+  .services-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* CTA Section */
+.cta-section {
+  background: var(--bg-alternate);
+  padding: 4rem 2rem;
+  text-align: center;
+  color: #2a2a2a;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.02);
+}
+
+.cta-section h2 {
+  font-size: 2rem;
+  color: #1a1a1a;
+  margin-bottom: 1rem;
+}
+
+.cta-section p {
+  font-size: 1.1rem;
+  color: #666666;
+  margin-bottom: 2rem;
+}
+
+.cta-section .cta-button {
+  background: var(--btn-primary);
+  color: #FFFFFF;
+}
+
+.cta-section .cta-button:hover {
+  background: rgba(1, 133, 235, 0.9);
+  box-shadow: 0 6px 18px rgba(1, 133, 235, 0.2);
+}
+
+@media (max-width: 768px) {
+
+  .hero-content h1 {
+    font-size: 2rem;
+  }
+
+  .features-container {
+    /* display: grid; */
+    grid-template-columns: repeat(2, 1fr);
+    justify-items: center;
+    gap: 1rem;
+  }
+
+  .feature-item h4 {
+    font-size: 1.1rem;
+  }
+
+  .feature-icon-svg {
+    width: 24px;
+    height: 24px;
+  }
+
+  .stats-container {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1.5rem;
+    padding: 5px;
+  }
+
+  .stat-item {
+    padding: 0.75rem;
+  }
+
+  .stat-item h3 {
+    font-size: 2.2rem;
+  }
+
+  .filter-container {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 480px) {
+  .stats-container {
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+  }
+}
+
+/* Advantages Section */
+.advantages-section {
+  background: var(--bg-alternate);
+  padding: 5rem 1.5rem;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.02);
+}
+
+.advantages-container {
+  max-width: 1280px;
+  margin: 0 auto;
+}
+
+.advantages-header {
+  text-align: center;
+  margin-bottom: 3.5rem;
+}
+
+.advantages-label {
+  display: inline-block;
+  color: var(--btn-primary);
+  font-size: 0.75rem;
+  letter-spacing: 0.3em;
+  text-transform: uppercase;
+  font-weight: 600;
+  margin-bottom: 0.75rem;
+}
+
+.advantages-title {
+  font-size: 2rem;
+  color: #1a1a1a;
+  font-weight: 700;
+  margin-top: 0.75rem;
+  font-family: var(--font-serif);
+}
+
+.advantages-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 1.5rem;
+  grid-template-columns: repeat(3, 1fr);
+}
+
+.advantage-card {
+  background: var(--card-bg);
+  border: 1px solid rgba(1, 133, 235, 0.12);
+  padding: 2rem 1.5rem;
+  border-radius: 6px;
+  transition: all 0.3s cubic-bezier(0.165, 0.84, 0.44, 1);
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.04);
+}
+
+.advantage-card:hover {
+  box-shadow: 0 8px 24px rgba(15, 23, 42, 0.08);
+  transform: translateY(-4px);
+  border-color: var(--btn-primary);
+}
+
+.advantage-icon {
+  width: 28px;
+  height: 28px;
+  margin-bottom: 0.75rem;
+  filter: hue-rotate(45deg);
+}
+
+.advantage-card-title {
+  font-size: 1.25rem;
+  font-weight: 700;
+  color: #1a1a1a;
+  margin-bottom: 0.5rem;
+  font-family: var(--font-serif);
+}
+
+.advantage-card-description {
+  font-size: 0.875rem;
+  color: #666666;
+  line-height: 1.5;
+  margin: 0;
+}
+
+@media (max-width: 992px) {
+  .advantages-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  
+  .advantages-title {
+    font-size: 1.875rem;
+  }
+}
+
+@media (max-width: 640px) {
+  .advantages-section {
+    padding: 3rem 1rem;
+  }
+  
+  .advantages-header {
+    margin-bottom: 2rem;
+  }
+  
+  .advantages-grid {
+    grid-template-columns: 1fr;
+  }
+  
+  .advantages-title {
+    font-size: 1.5rem;
+  }
+}
+
+
