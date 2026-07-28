@@ -7,10 +7,10 @@ function ServiceDetail() {
 
   if (!service) {
     return (
-      <section style={{ padding: '4rem 1.5rem', textAlign: 'center' }}>
-        <h1>Service not found</h1>
-        <p>The requested service could not be found.</p>
-        <Link to="/services" style={{ color: '#0096ff', marginTop: '1rem', display: 'inline-block' }}>
+      <section className="py-16 px-6 text-center">
+        <h1 className="font-serif text-[2.2rem] mb-4 text-[#1a1a1a]">Service not found</h1>
+        <p className="text-[#666666]">The requested service could not be found.</p>
+        <Link to="/services" className="text-[#0096ff] mt-4 inline-block hover:underline">
           Back to services
         </Link>
       </section>
@@ -18,18 +18,22 @@ function ServiceDetail() {
   }
 
   return (
-    <section style={{ padding: '4rem 1.5rem', maxWidth: '1000px', margin: '0 auto' }}>
-      <Link to="/services" style={{ color: '#0096ff', marginBottom: '1rem', display: 'inline-block' }}>
+    <section className="py-16 px-6 max-w-[1000px] mx-auto text-[#2a2a2a]">
+      <Link to="/services" className="text-[#0096ff] mb-4 inline-block hover:underline font-semibold">
         ← Back to services
       </Link>
-      <h1 style={{ fontSize: '2.2rem', marginBottom: '1rem' }}>{service.title}</h1>
-      <img src={service.image} alt={service.title} style={{ width: '100%', maxHeight: '420px', objectFit: 'cover', borderRadius: '16px', marginBottom: '1.5rem' }} />
-      <p style={{ fontSize: '1.05rem', lineHeight: 1.7, marginBottom: '1.5rem' }}>{service.description}</p>
+      <h1 className="font-serif text-[2.2rem] font-bold mb-4 text-[#1a1a1a]">{service.title}</h1>
+      <img
+        src={service.image}
+        alt={service.title}
+        className="w-full max-h-[420px] object-cover rounded-2xl mb-6 shadow-[0_4px_20px_rgba(0,0,0,0.06)]"
+      />
+      <p className="text-[1.05rem] leading-relaxed mb-6 text-[#4a5568]">{service.description}</p>
 
-      <h2 style={{ marginBottom: '0.75rem' }}>Key features</h2>
-      <ul style={{ paddingLeft: '1.2rem', lineHeight: 1.8 }}>
+      <h2 className="font-serif text-[1.5rem] font-bold mb-3 text-[#1a1a1a]">Key features</h2>
+      <ul className="pl-5 leading-relaxed list-disc text-[#4a5568]">
         {service.features.map((feature) => (
-          <li key={feature}>{feature}</li>
+          <li key={feature} className="mb-1">{feature}</li>
         ))}
       </ul>
     </section>
@@ -37,3 +41,4 @@ function ServiceDetail() {
 }
 
 export default ServiceDetail;
+

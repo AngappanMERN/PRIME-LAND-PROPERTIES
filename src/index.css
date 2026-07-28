@@ -1,42 +1,83 @@
 @import "tailwindcss";
 @import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&family=Inter:wght@300;400;500;600;700;800;900&display=swap');
 
+@theme {
+  --font-serif: 'Cormorant Garamond', Georgia, serif;
+  --font-sans: 'Inter', sans-serif;
+
+  --color-primary: var(--primary);
+  --color-primary-hover: var(--primary-hover);
+  --color-secondary: var(--secondary);
+  --color-accent: var(--accent);
+  --color-brand-pink: var(--brand-pink);
+  --color-brand-pink-hover: var(--brand-pink-hover);
+
+  --color-bg-main: var(--bg-main);
+  --color-bg-alternate: var(--bg-alternate);
+  --color-card-bg: var(--card-bg);
+
+  --color-text-main: var(--text-main);
+  --color-text-secondary: var(--text-secondary);
+  --color-text-muted: var(--text-muted);
+}
+
 :root {
   --font-serif: 'Cormorant Garamond', Georgia, serif;
   --font-sans: 'Inter', sans-serif;
 
-  --bg-main: rgb(255, 255, 255);
-  --bg-alternate: rgb(250, 245, 240);
-  --card-bg: rgb(255, 255, 255);
-  --btn-primary: rgb(1, 133, 235);
+  /* Theme Color Variables - Change entire website color scheme from here */
+  --primary: #0f4b80;
+  /* --primary-hover: #0072cb; */
+  --primary-hover: #0B3D6A;
+  --secondary: #59471d;
+  --accent: #d9a74a;
+  --brand-pink: #f50a68;
+  --brand-pink-hover: #d60052;
 
-  --bg-main-hex: #FFFFFF;
-  --bg-alternate-hex: #FAF5F0;
-  --card-bg-hex: #FFFFFF;
-  --btn-primary-hex: #0185EB;
-  --text-pink-color: #f41c72;
+  --bg-main: #ffffff;
+  --bg-alternate: #faf5f0;
+  --card-bg: #ffffff;
+
+  --text-main: #2a2a2a;
+  --text-secondary: #666666;
+  --text-muted: #929eaa;
 }
 
-/* Global Styles */
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
+@layer base {
+  * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
 
-body {
-  font-family: var(--font-sans);
-  background: var(--bg-main);
-  color: #2a2a2a;
-  line-height: 1.6;
-}
+  html {
+    scroll-behavior: smooth;
+  }
 
-html {
-  scroll-behavior: smooth;
-}
+  body {
+    font-family: var(--font-sans);
+    background-color: var(--bg-main);
+    color: var(--text-main);
+    line-height: 1.6;
+  }
 
-#root {
-  min-height: 100vh;
+  h1, h2, h3, h4, h5, h6 {
+    font-family: var(--font-serif) !important;
+    font-weight: 700;
+    line-height: 1.2;
+  }
+
+  p, span, div, li, a, label, button, input, select, textarea {
+    font-family: var(--font-sans);
+  }
+
+  button:focus,
+  a:focus,
+  input:focus,
+  textarea:focus,
+  select:focus {
+    outline: none;
+  }
 }
 
 /* Scrollbar Styling */
@@ -49,7 +90,7 @@ html {
 }
 
 ::-webkit-scrollbar-thumb {
-  background: var(--btn-primary);
+  background: var(--primary);
   border-radius: 10px;
 }
 
@@ -57,281 +98,15 @@ html {
   background: rgba(1, 133, 235, 0.8);
 }
 
-/* General Button Styles */
-button {
-  font-family: inherit;
-}
-
-/* Links */
-a {
-  color: var(--btn-primary);
-  text-decoration: none;
-  transition: color 0.3s;
-}
-
-a:hover {
-  color: rgba(1, 133, 235, 0.8);
-}
-
-/* Headings */
-h1, h2, h3, h4, h5, h6 {
-  font-family: var(--font-serif);
-  font-weight: 700;
-  line-height: 1.2;
-}
-
-p,
-span,
-div,
-li,
-a,
-label,
-button,
-input,
-select,
-textarea {
-  font-family: var(--font-sans);
-}
-
-/* Form inputs & buttons */
-button, input, select, textarea {
-  font-family: inherit;
-}
-
-/* Utility Classes */
-.container {
-  max-width: 1200px;
-  margin: 0 auto;
-  padding: 0 2rem;
-}
-
-.section-title {
-  font-size: 2rem;
-  color: var(--btn-primary);
-  text-align: center;
-  margin-bottom: 3rem;
-}
-
-.text-center {
-  text-align: center;
-}
-
-.text-muted {
-  color: #a0a0a0;
-}
-
-.text-primary {
-  color: var(--btn-primary);
-}
-
-.text-success {
-  color: #00ff00;
-}
-
-.text-danger {
-  color: #ff1493;
-}
-
-/* Grid Utilities */
-.grid-2 {
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  gap: 2rem;
-}
-
-.grid-3 {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 2rem;
-}
-
-.grid-4 {
-  display: grid;
-  grid-template-columns: repeat(4, 1fr);
-  gap: 2rem;
-}
-
-/* Animations */
-@keyframes fadeIn {
-  from {
-    opacity: 0;
-    transform: translateY(20px);
-  }
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
-}
-
-@keyframes slideInLeft {
-  from {
-    opacity: 0;
-    transform: translateX(-50px);
-  }
-  to {
-    opacity: 1;
-    transform: translateX(0);
-  }
-}
-
-@keyframes slideInRight {
-  from {
-    opacity: 0;
-    transform: translateX(50px);
-  }
-  to {
-    opacity: 1;
-    transform: translateX(0);
-  }
-}
-
-@keyframes pulse {
-  0%, 100% {
-    opacity: 1;
-  }
-  50% {
-    opacity: 0.7;
-  }
-}
-
-/* Responsive */
-@media (max-width: 768px) {
-  .grid-2,
-  .grid-3,
-  .grid-4 {
-    grid-template-columns: 1fr;
-  }
-
-  h1 {
-    font-size: 1.8rem;
-  }
-
-  h2 {
-    font-size: 1.5rem;
-  }
-
-  .section-title {
-    font-size: 1.5rem;
-  }
-}
-
-/* Focus States for Accessibility */
-button:focus,
-a:focus,
-input:focus,
-textarea:focus,
-select:focus {
-  outline: 2px solid var(--btn-primary);
-  outline-offset: 2px;
-}
-
 /* Print Styles */
 @media print {
-  .navbar,
-  .footer {
-    display: none;
+  nav, footer {
+    display: none !important;
   }
-
   body {
-    background: white;
-    color: black;
+    background: white !important;
+    color: black !important;
   }
 }
 
-.contact-card {
-  background: var(--card-bg);
-  border: 1px solid rgba(1, 133, 235, 0.12);
-  box-shadow: 0 12px 32px rgba(15, 23, 42, 0.06);
-}
 
-.icon-circle {
-  width: 60px;
-  height: 60px;
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  border-radius: 50%;
-  background: rgba(1, 133, 235, 0.1);
-  font-size: 1.3rem;
-}
-
-.contact-card h2 {
-  font-size: 1.9rem;
-}
-
-.contact-card p {
-  color: #6f7a8f;
-}
-
-.input-with-icon {
-  position: relative;
-}
-
-.input-with-icon .input-icon {
-  position: absolute;
-  left: 16px;
-  top: 50%;
-  transform: translateY(-50%);
-  color: #0b6cff;
-  font-size: 1rem;
-}
-
-.form-control-custom,
-.form-select-custom,
-.textarea-custom {
-  padding-left: 3.2rem;
-  border: 1px solid #dce7f2;
-  border-radius: 14px;
-  background: #ffffff;
-  min-height: 56px;
-}
-
-.textarea-custom {
-  padding-top: 1.15rem;
-  padding-bottom: 1.15rem;
-  min-height: 170px;
-  resize: vertical;
-}
-
-.form-control-custom:focus,
-.form-select-custom:focus,
-.textarea-custom:focus {
-  outline: none;
-  border-color: #6bb8ff;
-  box-shadow: 0 0 0 0.15rem rgba(38, 143, 255, 0.18);
-  background: #ffffff;
-}
-
-.contact-submit-btn {
-  border-radius: 14px;
-  height: 56px;
-  font-size: 1rem;
-  background-color: #f50a68;
-  border: none;
-  letter-spacing: 1px;
-  transition: transform 0.2s ease, box-shadow 0.2s ease;
-}
-
-.contact-submit-btn:hover:not(:disabled) {
-  transform: translateY(-1px);
-  box-shadow: 0 14px 26px rgba(245, 10, 104, 0.18);
-}
-
-.safe-note {
-  color: #6f7a8f;
-  font-size: 0.95rem;
-}
-
-.safe-note .icon-sm {
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  font-size: 1rem;
-}
-
-code {
-  font-size: 15px;
-  line-height: 135%;
-  padding: 4px 8px;
-  background: var(--code-bg);
-}

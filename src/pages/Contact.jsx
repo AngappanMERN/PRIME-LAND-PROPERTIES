@@ -1,6 +1,5 @@
 import { useState } from 'react';
 import { CheckCircle2, Edit3, FileText, Mail, MapPin, Phone, Send, ShieldCheck, User, XCircle } from 'lucide-react';
-import './Contact.css';
 
 function Contact() {
   // Form data state
@@ -126,47 +125,56 @@ function Contact() {
   };
 
   return (
-    <div className="contact-page">
+    <div className="w-full overflow-x-hidden bg-[#f8fafc] text-[#2a2a2a]">
       {/* Hero + Form Section */}
-      <div className="contact-hero-grid">
+      <div className="grid grid-cols-2 max-lg:grid-cols-1 min-h-[650px] max-lg:min-h-0">
         {/* Hero Section */}
-        <div className="contact-hero-panel">
+        <div className="relative flex items-center text-white min-h-[650px] max-lg:min-h-0 overflow-hidden">
           <img
             src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c?w=800&h=900&fit=crop"
             alt="Property"
-            className="contact-hero-bg"
+            className="absolute top-0 left-0 w-full h-full object-cover z-10"
           />
-          <div className="contact-hero-overlay"></div>
+          <div className="absolute top-0 left-0 w-full h-full bg-gradient-to-br from-[#0f172a]/85 to-[#0f172a]/65 z-20"></div>
 
-          <div className="contact-hero-content">
-            <h2 className="contact-hero-title">Get in touch with our experts.</h2>
-            <p className="contact-hero-text">
+          <div className="relative z-30 p-16 max-md:p-8 max-w-[600px]">
+            <h2 className="font-serif text-[2.5rem] max-sm:text-[1.85rem] font-bold mb-5 leading-[1.2]">
+              Get in touch with our experts.
+            </h2>
+            <p className="text-[#e2e8f0] text-[1.05rem] mb-10 leading-relaxed">
               Whether you're looking to invest, sell, or find your dream home, our team at
               Prime Land Properties is ready to assist.
             </p>
 
-            <div className="contact-info-list">
-              <div className="contact-info-item">
-                <MapPin size={24} className="contact-info-icon" />
+            <div className="flex flex-col gap-6">
+              <div className="flex items-start gap-5">
+                <MapPin size={24} className="text-[#00b4ff] shrink-0 mt-1" />
                 <div>
-                  <h6 className="contact-info-label">OFFICE LOCATION</h6>
-                  <p className="contact-info-val">742 Azure Way, Suite 100, San Francisco, CA</p>
+                  <h6 className="text-[0.75rem] font-bold text-[#00b4ff] tracking-[1.5px] mb-1 uppercase font-sans">
+                    OFFICE LOCATION
+                  </h6>
+                  <p className="m-0 text-base text-white font-sans">Mettukadai Road, Nasiyanur, Erode, Tamil Nadu - 638107</p>
                 </div>
               </div>
 
-              <div className="contact-info-item">
-                <Phone size={24} className="contact-info-icon" />
+              <div className="flex items-start gap-5">
+                <Phone size={24} className="text-[#00b4ff] shrink-0 mt-1" />
                 <div>
-                  <h6 className="contact-info-label">PHONE SUPPORT</h6>
-                  <p className="contact-info-val">+1 (555) 012-3456</p>
+                  <h6 className="text-[0.75rem] font-bold text-[#00b4ff] tracking-[1.5px] mb-1 uppercase font-sans">
+                    PHONE SUPPORT
+                  </h6>
+                  <p className="m-0 text-base text-white font-sans">+91 9087 123459</p>
+                  <p className="m-0 text-base text-white font-sans">+91 7339 033733</p>
                 </div>
               </div>
 
-              <div className="contact-info-item">
-                <Mail size={24} className="contact-info-icon" />
+              <div className="flex items-start gap-5">
+                <Mail size={24} className="text-[#00b4ff] shrink-0 mt-1" />
                 <div>
-                  <h6 className="contact-info-label">EMAIL US</h6>
-                  <p className="contact-info-val">inquiry@primeland.com</p>
+                  <h6 className="text-[0.75rem] font-bold text-[#00b4ff] tracking-[1.5px] mb-1 uppercase font-sans">
+                    EMAIL US
+                  </h6>
+                  <p className="m-0 text-base text-white font-sans">primelandproperties2@gmail.com</p>
                 </div>
               </div>
             </div>
@@ -174,40 +182,40 @@ function Contact() {
         </div>
 
         {/* Contact Form Panel */}
-        <div className="contact-form-panel">
-          <div className="contact-card">
-            <div className="contact-card-header">
-              <div className="icon-circle">
+        <div className="flex items-center justify-center p-12 max-md:p-8 max-sm:p-6 bg-white">
+          <div className="w-full max-w-[580px] bg-white p-10 max-sm:p-6 rounded-[1.25rem] shadow-[0_10px_30px_rgba(15,23,42,0.08)] border border-[#e2e8f0]">
+            <div className="flex items-center gap-5 mb-8">
+              <div className="w-16 h-16 rounded-full bg-[#edf3fb] flex items-center justify-center shrink-0">
                 <Send size={28} color="#0185eb" strokeWidth={2.2} />
               </div>
               <div>
-                <h2>We're Here to Help!</h2>
-                <p>Have a question or need assistance? Send us a message.</p>
+                <h2 className="font-serif text-[1.65rem] font-bold m-0 mb-1 text-[#0f172a]">We're Here to Help!</h2>
+                <p className="m-0 text-[#64748b] text-[0.95rem]">Have a question or need assistance? Send us a message.</p>
               </div>
             </div>
 
             {successMessage && (
-              <div className="alert alert-success" role="alert">
-                <CheckCircle2 size={18} className="alert-icon" />{successMessage}
+              <div className="bg-[#dcfce7] text-[#166534] border border-[#bbf7d0] p-[0.85rem_1.25rem] rounded-[0.75rem] mb-6 flex items-center text-[0.95rem] font-medium" role="alert">
+                <CheckCircle2 size={18} className="mr-3 shrink-0" />{successMessage}
               </div>
             )}
 
             {errorMessage && (
-              <div className="alert alert-danger" role="alert">
-                <XCircle size={18} className="alert-icon" />{errorMessage}
+              <div className="bg-[#fee2e2] text-[#991b1b] border border-[#fecaca] p-[0.85rem_1.25rem] rounded-[0.75rem] mb-6 flex items-center text-[0.95rem] font-medium" role="alert">
+                <XCircle size={18} className="mr-3 shrink-0" />{errorMessage}
               </div>
             )}
 
             <form onSubmit={handleSubmit}>
-              <div className="form-grid-2">
-                <div className="form-group">
-                  <label className="form-label-custom">FIRST NAME</label>
-                  <div className="input-with-icon">
-                    <User size={18} className="input-icon" />
+              <div className="grid grid-cols-2 max-sm:grid-cols-1 gap-5 mb-5">
+                <div className="mb-5">
+                  <label className="block text-[0.75rem] font-bold text-[#64748b] tracking-[1px] mb-2 uppercase">FIRST NAME</label>
+                  <div className="relative flex items-center">
+                    <User size={18} className="absolute left-5 text-primary pointer-events-none z-10" />
                     <input
                       type="text"
                       name="firstName"
-                      className="form-control-custom"
+                      className="w-full pl-[3.25rem] pr-4 py-[0.85rem] border-[1.5px] border-[#cbd5e1] rounded-[0.75rem] bg-white text-[#0f172a] text-[0.95rem] outline-none transition-all duration-200 focus:border-primary focus:ring-4 focus:ring-primary/15"
                       placeholder="John"
                       value={formData.firstName}
                       onChange={handleChange}
@@ -215,14 +223,14 @@ function Contact() {
                     />
                   </div>
                 </div>
-                <div className="form-group">
-                  <label className="form-label-custom">LAST NAME</label>
-                  <div className="input-with-icon">
-                    <User size={18} className="input-icon" />
+                <div className="mb-5">
+                  <label className="block text-[0.75rem] font-bold text-[#64748b] tracking-[1px] mb-2 uppercase">LAST NAME</label>
+                  <div className="relative flex items-center">
+                    <User size={18} className="absolute left-5 text-primary pointer-events-none z-10" />
                     <input
                       type="text"
                       name="lastName"
-                      className="form-control-custom"
+                      className="w-full pl-[3.25rem] pr-4 py-[0.85rem] border-[1.5px] border-[#cbd5e1] rounded-[0.75rem] bg-white text-[#0f172a] text-[0.95rem] outline-none transition-all duration-200 focus:border-primary focus:ring-4 focus:ring-primary/15"
                       placeholder="Doe"
                       value={formData.lastName}
                       onChange={handleChange}
@@ -232,14 +240,14 @@ function Contact() {
                 </div>
               </div>
 
-              <div className="form-group">
-                <label className="form-label-custom">EMAIL ADDRESS</label>
-                <div className="input-with-icon">
-                  <Mail size={18} className="input-icon" />
+              <div className="mb-5">
+                <label className="block text-[0.75rem] font-bold text-[#64748b] tracking-[1px] mb-2 uppercase">EMAIL ADDRESS</label>
+                <div className="relative flex items-center">
+                  <Mail size={18} className="absolute left-5 text-primary pointer-events-none z-10" />
                   <input
                     type="email"
                     name="email"
-                    className="form-control-custom"
+                    className="w-full pl-[3.25rem] pr-4 py-[0.85rem] border-[1.5px] border-[#cbd5e1] rounded-[0.75rem] bg-white text-[#0f172a] text-[0.95rem] outline-none transition-all duration-200 focus:border-primary focus:ring-4 focus:ring-primary/15"
                     placeholder="john@example.com"
                     value={formData.email}
                     onChange={handleChange}
@@ -248,13 +256,13 @@ function Contact() {
                 </div>
               </div>
 
-              <div className="form-group">
-                <label className="form-label-custom">MESSAGE TYPE</label>
-                <div className="input-with-icon">
-                  <FileText size={18} className="input-icon" />
+              <div className="mb-5">
+                <label className="block text-[0.75rem] font-bold text-[#64748b] tracking-[1px] mb-2 uppercase">MESSAGE TYPE</label>
+                <div className="relative flex items-center">
+                  <FileText size={18} className="absolute left-5 text-primary pointer-events-none z-10" />
                   <select
                     name="messageType"
-                    className="form-select-custom"
+                    className="w-full pl-[3.25rem] pr-4 py-[0.85rem] border-[1.5px] border-[#cbd5e1] rounded-[0.75rem] bg-white text-[#0f172a] text-[0.95rem] outline-none transition-all duration-200 focus:border-primary focus:ring-4 focus:ring-primary/15"
                     value={formData.messageType}
                     onChange={handleChange}
                   >
@@ -266,13 +274,13 @@ function Contact() {
                 </div>
               </div>
 
-              <div className="form-group">
-                <label className="form-label-custom">YOUR MESSAGE</label>
-                <div className="input-with-icon">
-                  <Edit3 size={18} className="input-icon" />
+              <div className="mb-5">
+                <label className="block text-[0.75rem] font-bold text-[#64748b] tracking-[1px] mb-2 uppercase">YOUR MESSAGE</label>
+                <div className="relative flex items-center">
+                  <Edit3 size={18} className="absolute left-5 text-primary pointer-events-none z-10" />
                   <textarea
                     name="message"
-                    className="textarea-custom"
+                    className="w-full pl-[3.25rem] pr-4 pt-4 pb-[0.85rem] border-[1.5px] border-[#cbd5e1] rounded-[0.75rem] bg-white text-[#0f172a] text-[0.95rem] outline-none min-h-[140px] resize-y transition-all duration-200 focus:border-primary focus:ring-4 focus:ring-primary/15"
                     placeholder="Tell us more about your needs..."
                     rows="4"
                     value={formData.message}
@@ -284,14 +292,14 @@ function Contact() {
 
               <button
                 type="submit"
-                className="contact-submit-btn"
+                className="w-full h-[54px] rounded-[0.75rem] bg-brand-pink text-white border-none font-bold text-base tracking-[1px] cursor-pointer mt-2 transition-all duration-200 hover:bg-[#d90758] hover:-translate-y-[1px] hover:shadow-[0_8px_20px_rgba(245,10,104,0.25)] disabled:opacity-70 disabled:cursor-not-allowed"
                 disabled={isLoading}
               >
                 {isLoading ? 'Sending...' : 'SEND MESSAGE'}
               </button>
             </form>
 
-            <div className="safe-note">
+            <div className="flex items-center justify-center gap-2 mt-6 text-[#64748b] text-[0.875rem]">
               <ShieldCheck size={18} />
               <span>Your information is safe with us. We never share your details.</span>
             </div>
@@ -300,9 +308,9 @@ function Contact() {
       </div>
 
       {/* Map Section */}
-      <div className="map-section">
-        <div className="map-container">
-          <div className="map-frame-wrapper">
+      <div className="py-16 px-6 max-sm:px-4 bg-[#f1f5f9]">
+        <div className="max-w-[1200px] mx-auto">
+          <div className="rounded-[1rem] overflow-hidden shadow-[0_4px_20px_rgba(0,0,0,0.08)] border border-[#e2e8f0]">
             <iframe
               title="Prime Land Properties Location"
               src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3912.0510009782815!2d77.6417924!3d11.330983!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3ba96dd3fb22dbd1%3A0x679392f7677955b7!2sPRIMELAND%20PROPERTIES!5e0!3m2!1sen!2sin!4v1784553562880!5m2!1sen!2sin"
@@ -314,7 +322,7 @@ function Contact() {
               referrerPolicy="strict-origin-when-cross-origin"
             ></iframe>
           </div>
-          <div className="map-link-text">
+          <div className="text-right text-[#64748b] font-bold text-[0.85rem] tracking-[1px] mt-4 cursor-pointer transition-colors duration-200 hover:text-primary">
             VIEW FULL MAP
           </div>
         </div>

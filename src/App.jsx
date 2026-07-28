@@ -7,7 +7,6 @@ import About from './pages/About';
 import ServiceDetail from './pages/ServiceDetail';
 import Projects from './pages/Projects';
 import Properties from './pages/Properties';
-import Blog from './pages/Blog';
 import Contact from './pages/Contact';
 
 function App() {
@@ -23,7 +22,6 @@ function App() {
             <Route path="/services/:slug" element={<ServiceDetail />} />
             <Route path="/projects" element={<Projects />} />
             <Route path="/properties" element={<Properties />} />
-            <Route path="/blog" element={<Blog />} />
             <Route path="/contact" element={<Contact />} />
             <Route path="*" element={<Home />} />
           </Routes>
