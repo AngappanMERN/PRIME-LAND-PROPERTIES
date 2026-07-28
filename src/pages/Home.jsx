@@ -3,6 +3,8 @@ import { Award, Clock, Handshake, Shield, CheckCircle2 } from 'lucide-react';
 import ServiceCard from '../components/ServiceCard';
 import { services } from '../data/services';
 import { advantages } from '../data/advantagesData';
+import BlurText from '../components/BlurText';
+import BeforeAfterSlider from '../components/BeforeAfterSlider';
 
 function Home() {
   return (
@@ -15,30 +17,49 @@ function Home() {
         </video>
       </section>
 
+      {/* Floating text */}
+      <section className="bg-bg-alternate py-10 px-4 border-y border-[rgba(217,167,74,0.15)] shadow-[0_2px_8px_rgba(0,0,0,0.02)]">
+        <div className="max-w-[1100px] mx-auto flex flex-col items-center justify-center text-center gap-3">
+          <BlurText
+            text="வருங்கால வாழ்க்கைக்கு"
+            delay={350}
+            animateBy="words"
+            direction="top"
+            className="text-3xl sm:text-4xl max-md:text-2xl font-serif font-bold text-primary justify-center tracking-wide"
+          />
+          <BlurText
+            text="வளமான முதலீடு"
+            delay={350}
+            animateBy="words"
+            direction="bottom"
+            className="text-3xl sm:text-4xl max-md:text-2xl font-serif font-bold text-accent justify-center tracking-wide"
+          />
+        </div>
+      </section>
       {/* Features Banner */}
       <section className="bg-bg-main py-8 px-4 border-none shadow-[0_2px_8px_rgba(0,0,0,0.04)]">
         <div className="max-w-[1100px] mx-auto flex flex-wrap justify-around items-center py-8 px-4 gap-10 max-md:grid max-md:grid-cols-2 max-md:justify-items-center max-md:gap-4">
           <div className="group flex flex-row items-center gap-4 px-4 py-2 rounded transition-all duration-400 cursor-default hover:-translate-y-[2px]">
-            <Shield className="w-7 h-7 stroke-brand-pink stroke-[1.5px] shrink-0 transition-all duration-400 group-hover:scale-[1.08] group-hover:drop-shadow-[0_0_4px_rgba(244,28,114,0.4)]" />
-            <h4 className="text-[#a28554] font-serif text-[1.25rem] max-md:text-[1.1rem] font-bold m-0 tracking-[0.5px] transition-all duration-400">
+            <Shield className="w-8 h-8 stroke-primary stroke-[1.5px] shrink-0 transition-all duration-400 group-hover:scale-[1.08] group-hover:drop-shadow-[0_0_4px_rgba(15,75,128,0.4)]" />
+            <h4 className="text-primary font-serif text-[1.35rem] max-md:text-[1.1rem] font-bold m-0 tracking-[0.5px] transition-all duration-400">
               Reliable
             </h4>
           </div>
           <div className="group flex flex-row items-center gap-4 px-4 py-2 rounded transition-all duration-400 cursor-default hover:-translate-y-[2px]">
-            <Award className="w-7 h-7 stroke-brand-pink stroke-[1.5px] shrink-0 transition-all duration-400 group-hover:scale-[1.08] group-hover:drop-shadow-[0_0_4px_rgba(244,28,114,0.4)]" />
-            <h4 className="text-brand-pink font-serif text-[1.25rem] max-md:text-[1.1rem] font-bold m-0 tracking-[0.5px] transition-all duration-400">
+            <Award className="w-8 h-8 stroke-primary stroke-[1.5px] shrink-0 transition-all duration-400 group-hover:scale-[1.08] group-hover:drop-shadow-[0_0_4px_rgba(15,75,128,0.4)]" />
+            <h4 className="text-primary font-serif text-[1.35rem] max-md:text-[1.1rem] font-bold m-0 tracking-[0.5px] transition-all duration-400">
               Quality
             </h4>
           </div>
           <div className="group flex flex-row items-center gap-4 px-4 py-2 rounded transition-all duration-400 cursor-default hover:-translate-y-[2px]">
-            <Clock className="w-7 h-7 stroke-brand-pink stroke-[1.5px] shrink-0 transition-all duration-400 group-hover:scale-[1.08] group-hover:drop-shadow-[0_0_4px_rgba(244,28,114,0.4)]" />
-            <h4 className="text-brand-pink font-serif text-[1.25rem] max-md:text-[1.1rem] font-bold m-0 tracking-[0.5px] transition-all duration-400">
+            <Clock className="w-8 h-8 stroke-primary stroke-[1.5px] shrink-0 transition-all duration-400 group-hover:scale-[1.08] group-hover:drop-shadow-[0_0_4px_rgba(15,75,128,0.4)]" />
+            <h4 className="text-primary font-serif text-[1.35rem] max-md:text-[1.1rem] font-bold m-0 tracking-[0.5px] transition-all duration-400">
               Experience
             </h4>
           </div>
           <div className="group flex flex-row items-center gap-4 px-4 py-2 rounded transition-all duration-400 cursor-default hover:-translate-y-[2px]">
-            <Handshake className="w-7 h-7 stroke-brand-pink stroke-[1.5px] shrink-0 transition-all duration-400 group-hover:scale-[1.08] group-hover:drop-shadow-[0_0_4px_rgba(244,28,114,0.4)]" />
-            <h4 className="text-brand-pink font-serif text-[1.25rem] max-md:text-[1.1rem] font-bold m-0 tracking-[0.5px] transition-all duration-400">
+            <Handshake className="w-8 h-8 stroke-primary stroke-[1.5px] shrink-0 transition-all duration-400 group-hover:scale-[1.08] group-hover:drop-shadow-[0_0_4px_rgba(15,75,128,0.4)]" />
+            <h4 className="text-primary font-serif text-[1.35rem] max-md:text-[1.1rem] font-bold m-0 tracking-[0.5px] transition-all duration-400">
               Fair
             </h4>
           </div>
@@ -96,6 +117,7 @@ function Home() {
         </div>
       </section>
 
+      <BeforeAfterSlider />
       {/* CTA Section */}
       <section className="bg-bg-alternate py-16 px-8 text-center text-[#2a2a2a] shadow-[0_2px_8px_rgba(0,0,0,0.02)]">
         <h2 className="text-[2rem] text-[#1a1a1a] mb-4 font-serif font-bold">Ready to Find Your Dream Property?</h2>
