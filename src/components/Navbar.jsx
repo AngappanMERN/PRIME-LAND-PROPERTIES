@@ -39,7 +39,7 @@ function Navbar() {
           <img
             src="/primeland-new-logo.png"
             alt="Prime Land Logo"
-            className="h-[100px] max-[1200px]:h-[100px] w-auto object-contain transition-transform duration-300 hover:scale-[1.03]"
+            className="h-[75px] max-[1200px]:h-[60px] w-auto object-contain transition-transform duration-300 hover:scale-[1.03]"
           />
         </Link>
 

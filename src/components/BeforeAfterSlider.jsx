@@ -3,9 +3,9 @@ import { MoveHorizontal } from 'lucide-react';
 
 const BeforeAfterSlider = ({
   beforeImage = "/before-land.png",
-  afterImage = "/after-land.png",
-  beforeLabel = "Before Development",
-  afterLabel = "Fully Developed Layout",
+  afterImage = "/after-land.jpg",
+  beforeLabel = "Before",
+  afterLabel = "After",
   eyebrow = "TRANSFORMATION GALLERY",
   title = "Development That Speaks For Itself",
   description = "Drag the slider to see how raw land is transformed into high-value, fully developed gated community plots."

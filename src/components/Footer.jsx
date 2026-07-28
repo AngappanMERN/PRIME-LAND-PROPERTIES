@@ -8,7 +8,7 @@ function Footer() {
       <div className="max-w-[1200px] mx-auto px-8 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8 mb-8">
         <div className="flex flex-col">
           <Link to="/" className="flex items-center transition-transform duration-300 hover:scale-102">
-            <img src="/primeland-logo.png" alt="Prime Land Logo" className="h-16 w-auto object-contain mb-4" />
+            <img src="/primeland-new-logo.png" alt="Prime Land Logo" className="h-16 w-auto object-contain mb-4" />
           </Link>
           <p className="text-[0.9rem] leading-relaxed mb-4 text-[#2a2a2a]">
             Prime by name, Prime by property. Your trusted real estate partner.
