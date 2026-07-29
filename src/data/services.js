@@ -1,182 +1,137 @@
 export const services = [
   {
     id: 1,
-    title: "Project Management Coordination",
-    slug: "project-management-coordination",
-    path: "/services/project-management-coordination",
-    image: "https://images.unsplash.com/photo-1541888946425-d81bb19240f5?w=800&auto=format&fit=crop&q=80",
-    description: "Our comprehensive Project Management Coordination services cover everything from initial feasibility studies and design planning to procurement, zoning compliance, and on-site subcontractor management. We ensure your construction project is delivered safely, on schedule, and within budget.",
+    title: "Sanierung & Modernisierung",
+    slug: "sanierung-modernisierung",
+    path: "/services/sanierung-modernisierung",
+    image: "https://skarosoft.com/sinova/wp-content/uploads/2026/07/sanierung-modernisierung.jpg",
+    heroTitle: "Sanierung & Modernisierung – schlüsselfertig, deutschlandweit",
+    description:
+      "Von der Wohnungssanierung bis zur Komplettsanierung: Wir revitalisieren Bestandsgebäude schlüsselfertig mit eigenem Team. Termingerecht, transparent und deutschlandweit.",
+    tags: ["Kernsanierung", "Wohnungssanierung", "Komplettsanierung"],
+    phone: "030 123 456 78",
     features: [
-      "End-to-End Scheduling & Critical Path Analysis",
-      "Subcontractor Sourcing, Vetting & Coordination",
-      "Strict Budget Management & Cost Estimation",
-      "Regulatory Approvals, Permits & Code Compliance",
-      "Real-time Client Portals & Regular Progress Reporting"
+      "Wohnungssanierungen – komplette Neugestaltung von Wohnungen inklusive aller Gewerke, von Elektro über Sanitär bis zu Boden- und Malerarbeiten.",
+      "Kernsanierungen – vollständige Entkernung und Neuaufbau der Innenräume bis zum schlüsselfertigen Zustand.",
+      "Gewerbe- und Ladenbau – Umbau und Ausbau von Gewerbeflächen, Ladenlokalen und Büros nach individuellen Anforderungen.",
+      "Komplettumbauten – Grundrissänderungen, Raumaufteilungen und umfassende Umbauten für neue Nutzungskonzepte.",
+      "Revitalisierung von Bestandsgebäuden – denkmalgerechte und zeitgemäße Aufwertung älterer Gebäude für eine neue Nutzung.",
     ],
-    gallery: [
-      "https://images.unsplash.com/photo-1504307651254-35680f356dfd?w=600&auto=format&fit=crop&q=80",
-      "https://images.unsplash.com/photo-1503387762-592deb58ef4e?w=600&auto=format&fit=crop&q=80",
-      "https://images.unsplash.com/photo-1590069261209-f8e9b8642343?w=600&auto=format&fit=crop&q=80"
+    benefits: [
+      {
+        icon: "users",
+        text: "Eigenleistung – eigenes Team, keine Subunternehmer",
+      },
+      {
+        icon: "shield",
+        text: "Alle Gewerke aus einer Hand – ein Ansprechpartner",
+      },
+      {
+        icon: "clock",
+        text: "Gewährleistung nach VOB",
+      },
+      {
+        icon: "award",
+        text: "Deutschlandweit tätig",
+      },
+      {
+        icon: "award",
+        text: "Transparente & faire Preise",
+      },
+    ],
+    about: {
+      heading: "Sanierung & Modernisierung – professionell und zuverlässig",
+      paragraphs: [
+        "Eine Sanierung ist mehr als nur eine Renovierung – sie erfordert Erfahrung, Planung und die Abstimmung zahlreicher Gewerke. Als Bauunternehmen mit eigenem Team übernehmen wir Ihr Sanierungsprojekt komplett: von der Entkernung über den Rohbau bis zum schlüsselfertigen Ausbau. So haben Sie einen Ansprechpartner für alle Arbeiten und profitieren von abgestimmten Abläufen ohne Schnittstellenverluste.",
+        "Wir sanieren Wohnungen, Gewerbeeinheiten und ganze Gebäude – ob Teilsanierung oder Kernsanierung. Dabei legen wir Wert auf hochwertige Materialien, saubere Ausführung und die Einhaltung aller baurechtlichen Vorschriften. Unsere Projektleiter koordinieren den gesamten Ablauf, kontrollieren die Qualität und sorgen für die termingerechte Übergabe. Mit Gewährleistung nach VOB und transparenter Kalkulation bieten wir Ihnen Planungssicherheit von Anfang an.",
+      ],
+      infoBox: {
+        title: "Qualität & Einsatzbereiche",
+        text: "Typische Einsatzbereiche umfassen die Modernisierung von Wohnungen und Gewerbeeinheiten, die Kernsanierung von Altbauten, Ladenumbauten für neue Nutzungen sowie die Revitalisierung denkmalgeschützter Gebäude. Wir setzen dabei auf hochwertige, langlebige Materialien und arbeiten eng mit Architekten, Statikern und Denkmalbehörden zusammen. Jede Sanierung beginnt mit einer gründlichen Bestandsaufnahme, bei der wir den Zustand der Bausubstanz, eventuelle Schadstoffbelastungen und statische Anforderungen prüfen. Auf dieser Basis erstellen wir ein maßgeschneidertes Sanierungskonzept, das wirtschaftliche und bautechnische Aspekte gleichermaßen berücksichtigt.",
+      },
+    },
+    process: [
+      {
+        step: 1,
+        title: "Erstberatung & Bestandsaufnahme",
+        text: "Begehung Ihres Objekts, Analyse des Sanierungsbedarfs und Besprechung Ihrer Wünsche.",
+      },
+      {
+        step: 2,
+        title: "Planung & Angebot",
+        text: "Detaillierte Leistungsbeschreibung, Kostenaufstellung und Zeitplan für Ihr Projekt.",
+      },
+      {
+        step: 3,
+        title: "Entkernung & Vorbereitung",
+        text: "Fachgerechter Rückbau, Entsorgung und Vorbereitung der Räume für den Neuaufbau.",
+      },
+      {
+        step: 4,
+        title: "Ausführung aller Gewerke",
+        text: "Rohbau, Installation, Trockenbau, Böden, Malerarbeiten",
+      },
+      {
+        step: 5,
+        title: "Abnahme & Übergabe",
+        text: "Gemeinsame Endabnahme, vollständige Dokumentation und Gewährleistung nach VOB.",
+      },
     ],
     faqs: [
       {
-        question: "How do you handle budget overruns?",
-        answer: "We utilize rigorous cost tracking systems and pre-vetted subcontractor agreements. By establishing detailed scope definitions early, we minimize change orders and protect your budget."
+        question: "Was kostet eine Kernsanierung?",
+        answer:
+          "Die Kosten einer Kernsanierung hängen vom Zustand des Gebäudes, dem Umfang der Arbeiten und den gewünschten Materialien ab. Wir erstellen Ihnen ein detailliertes, transparentes Angebot nach einer Objektbegehung – kostenlos und unverbindlich.",
       },
       {
-        question: "What communication can I expect during my project?",
-        answer: "You will have a dedicated project manager and weekly reports, along with access to an online portal showing current photos, schedules, and logs."
-      }
-    ]
+        question: "Wie lange dauert eine Sanierung?",
+        answer:
+          "Die Dauer variiert je nach Projektumfang. Eine Wohnungssanierung kann wenige Wochen in Anspruch nehmen, eine Kernsanierung mehrere Monate. Nach der Bestandsaufnahme erhalten Sie von uns einen realistischen Zeitplan.",
+      },
+      {
+        question: "Übernehmen Sie auch denkmalgeschützte Gebäude?",
+        answer:
+          "Ja, wir haben Erfahrung mit der Sanierung und Revitalisierung denkmalgeschützter Bestandsgebäude und berücksichtigen dabei alle behördlichen Auflagen und Vorgaben.",
+      },
+    ],
+    projects: [
+      {
+        title: "Wohnanlage Hansaviertel",
+        category: "Sanierung & Modernisierung",
+        location: "Berlin",
+        size: "3.200 m²",
+        year: 2024,
+        image:
+          "https://skarosoft.com/sinova/wp-content/uploads/2026/07/sanierun-modernisierung.jpg",
+      },
+      {
+        title: "Bürokomplex Westend",
+        category: "Fassadenarbeiten",
+        location: "Frankfurt",
+        size: "5.800 m²",
+        year: 2024,
+        image:
+          "https://skarosoft.com/sinova/wp-content/uploads/2026/07/fassadenarbeiten.jpg",
+      },
+      {
+        title: "Tiefgarage Schlossgarten",
+        category: "Tiefgaragensanierung",
+        location: "Stuttgart",
+        size: "1.500 m²",
+        year: 2023,
+        image:
+          "https://skarosoft.com/sinova/wp-content/uploads/2026/07/tiefgaragensanierung.jpg",
+      },
+    ],
+    relatedServices: [
+      {
+        title: "Projektleitung & Koordination",
+        slug: "projektleitung-koordination",
+      },
+      {
+        title: "Trockenbau",
+        slug: "trockenbau",
+      },
+    ],
   },
-  {
-    id: 2,
-    title: "Roof Renovation",
-    slug: "roof-renovation",
-    path: "/services/roof-renovation",
-    image: "https://images.unsplash.com/photo-1628744448840-55412be8944f?w=800&auto=format&fit=crop&q=80",
-    description: "Ensure your property remains safe, energy-efficient, and structurally sound with our professional roof renovation services. We handle tear-offs, shingle replacements, waterproofing, flat roof systems, and metal roofing for commercial and residential properties.",
-    features: [
-      "Premium Material Procurement (Shingles, Tiles, Metal)",
-      "High-Performance Waterproofing & Underlayment",
-      "Structural Rafter & Decking Assessment and Repair",
-      "Optimal Insulation & Ventilation Integration",
-      "Full Post-Installation Inspection & Extended Warranties"
-    ],
-    gallery: [
-      "https://images.unsplash.com/photo-1632836999861-249559cd4ae5?w=600&auto=format&fit=crop&q=80",
-      "https://images.unsplash.com/photo-1626885930974-4b69aa21b190?w=600&auto=format&fit=crop&q=80",
-      "https://images.unsplash.com/photo-1605276374104-dee2a0ed3cd6?w=600&auto=format&fit=crop&q=80"
-    ],
-    faqs: [
-      {
-        question: "How long does a typical roof renovation take?",
-        answer: "Most residential roofs take between 2 to 5 days to complete, depending on size, material, and weather conditions."
-      },
-      {
-        question: "Do you offer warranties on new roofs?",
-        answer: "Yes, we offer both manufacturer warranties on premium materials and our own multi-year workmanship warranty."
-      }
-    ]
-  },
-  {
-    id: 3,
-    title: "Electrical Work",
-    slug: "electrical-work",
-    path: "/services/electrical-work",
-    image: "https://images.unsplash.com/photo-1621905251189-08b45d6a269e?w=800&auto=format&fit=crop&q=80",
-    description: "Get safe, compliant, and state-of-the-art electrical installations for your renovation or new construction project. From complete building rewiring and electrical panels to smart lighting setups and EV charging stations.",
-    features: [
-      "Full Building Rewiring & Smart Home Upgrades",
-      "Main Distribution Panel & Circuit Breaker Upgrades",
-      "Energy-Efficient LED & Architectural Lighting Schemes",
-      "Backup Generator Installation & Emergency Power Setup",
-      "Comprehensive Electrical Safety Inspections & Certifications"
-    ],
-    gallery: [
-      "https://images.unsplash.com/photo-1558224494-ef8b217500d6?w=600&auto=format&fit=crop&q=80",
-      "https://images.unsplash.com/photo-1581092160607-ee22621dd758?w=600&auto=format&fit=crop&q=80",
-      "https://images.unsplash.com/photo-1607604276583-eef5d076aa5f?w=600&auto=format&fit=crop&q=80"
-    ],
-    faqs: [
-      {
-        question: "Are your electricians licensed and insured?",
-        answer: "Absolutely. All our electrical technicians are certified, fully licensed, and insured, operating under master electrician supervision."
-      },
-      {
-        question: "Can you help design lighting layouts?",
-        answer: "Yes, we coordinate with interior architects to create electrical plans that highlight space, improve functionality, and optimize energy use."
-      }
-    ]
-  },
-  {
-    id: 4,
-    title: "Drywall",
-    slug: "drywall",
-    path: "/services/drywall",
-    image: "https://images.unsplash.com/photo-1504917595217-d4dc5ebe6122?w=800&auto=format&fit=crop&q=80",
-    description: "Achieve flawlessly smooth walls and ceilings with our professional drywall installation and finishing services. We specialize in framing, sheetrock hanging, precise taping, mudding, texturing, and complete acoustical ceiling systems.",
-    features: [
-      "High-Efficiency Sheetrock Hanging & Stud Framing",
-      "Precise Taping & Level-5 Smooth Finish Mudding",
-      "Moisture-Resistant & Fire-Rated Drywall Solutions",
-      "Soundproofing Panels & Acoustic Insulation",
-      "Seamless Damage Repairs, Patches & Texturing"
-    ],
-    gallery: [
-      "https://images.unsplash.com/photo-1513694203232-719a280e022f?w=600&auto=format&fit=crop&q=80",
-      "https://images.unsplash.com/photo-1589939705384-5185137a7f0f?w=600&auto=format&fit=crop&q=80",
-      "https://images.unsplash.com/photo-1595841696660-1e8c744a8714?w=600&auto=format&fit=crop&q=80"
-    ],
-    faqs: [
-      {
-        question: "What is a Level-5 drywall finish?",
-        answer: "A Level-5 finish represents the highest level of drywall finishing. It includes a thin skim coat of joint compound applied over the entire surface to eliminate texture variations and prevent 'joint banding' under critical lighting."
-      },
-      {
-        question: "How do you minimize dust during installation?",
-        answer: "We use state-of-the-art sanding equipment with HEPA vacuum attachments and seal off work areas with heavy-duty plastic sheeting to keep the rest of your home clean."
-      }
-    ]
-  },
-  {
-    id: 5,
-    title: "Interior Fit-Out & Remodeling",
-    slug: "interior-fit-out-remodeling",
-    path: "/services/interior-fit-out-remodeling",
-    image: "https://images.unsplash.com/photo-1618221195710-dd6b41faaea6?w=800&auto=format&fit=crop&q=80",
-    description: "Transform your interior spaces with premium custom remodeling. We specialize in luxury kitchen remodels, modern bathroom transformations, partition wall adjustments, finish carpentry, and custom flooring installations.",
-    features: [
-      "Custom Cabinetry & Detail-Oriented Finish Carpentry",
-      "Premium Tile, Hardwood, & Micro-cement Flooring",
-      "Spatial Redesign, Wall Removals & Open Floor Concepts",
-      "Curated Material & Color Consultation",
-      "Complete Kitchen, Bathroom & Office Transformations"
-    ],
-    gallery: [
-      "https://images.unsplash.com/photo-1556911220-e15b29be8c8f?w=600&auto=format&fit=crop&q=80",
-      "https://images.unsplash.com/photo-1584622650111-993a426fbf0a?w=600&auto=format&fit=crop&q=80",
-      "https://images.unsplash.com/photo-1600585154526-990dced4db0d?w=600&auto=format&fit=crop&q=80"
-    ],
-    faqs: [
-      {
-        question: "Do you handle plumbing and electrical changes in remodels?",
-        answer: "Yes, we provide fully integrated design-build services. This means we coordinate our in-house plumbers, electricians, and carpenters so you only deal with one contractor."
-      },
-      {
-        question: "Can I live in the house during a major remodel?",
-        answer: "It depends on the scale. For kitchen and full-house remodels, it is often more comfortable to make temporary living arrangements. We work efficiently to minimize disruption."
-      }
-    ]
-  },
-  {
-    id: 6,
-    title: "Structural Concrete & Masonry",
-    slug: "structural-concrete-masonry",
-    path: "/services/structural-concrete-masonry",
-    image: "https://images.unsplash.com/photo-1590381105924-c72589b9ef3f?w=800&auto=format&fit=crop&q=80",
-    description: "Build a lasting foundation with our precise structural concrete and masonry services. We construct foundations, retaining walls, slab-on-grade floors, load-bearing brickwork, and custom stone installations.",
-    features: [
-      "Precise Foundation Pouring & Rebar Reinforcement",
-      "Commercial & Residential Concrete Slab-on-Grade",
-      "Retaining Walls, Blockwork & Load-Bearing Masonry",
-      "Decorative Architectural Concrete & Stamped Finishes",
-      "Structural Repair, Underpinning & Seismic Upgrades"
-    ],
-    gallery: [
-      "https://images.unsplash.com/photo-1541888946425-d81bb19240f5?w=600&auto=format&fit=crop&q=80",
-      "https://images.unsplash.com/photo-1581094288338-2314dddb7ecc?w=600&auto=format&fit=crop&q=80",
-      "https://images.unsplash.com/photo-1517646287270-a5a9ca602e5c?w=600&auto=format&fit=crop&q=80"
-    ],
-    faqs: [
-      {
-        question: "How long does concrete take to cure before building?",
-        answer: "Concrete typically reaches about 70% of its full strength in 7 days, and its full standard structural strength at 28 days. We strictly monitor moisture levels before starting loads."
-      },
-      {
-        question: "What is seismic underpinning?",
-        answer: "It is the reinforcement of an existing foundation to make it more resistant to ground movements and seismic activities, essential for older properties."
-      }
-    ]
-  }
 ];
